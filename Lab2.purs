@@ -3,7 +3,7 @@ module Lab2 where
 import Prelude
 
 import Effect (Effect)
-import Effect.Console (logShow)
+import Effect.Console (log)
 import Data.List (List(..), reverse, length, (:))
 import Data.Tuple (Tuple(..), fst, snd)
 import Data.Maybe (Maybe(..))
@@ -65,4 +65,4 @@ tailRecursionTake = go Nil
 
 test::Effect Unit
 test = do
-  logShow $ tailRecursionFilter(_<4) (1 : 3 : 5 : 7 : Nil)
+  log $ show $ tailRecursionFilter(_<4) (1 : 3 : 5 : 7 : Nil)
